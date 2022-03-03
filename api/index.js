@@ -2,12 +2,19 @@ const express = require("express");
 const app = express();
 const port = 3001;
 
+app.get('/', (req, res) => {
+    res.send("Todos GET Request");
+});
+
+app.post('/', (req, res) => {
+    res.send("Todos POST Request");
+});
+
 app.listen(port, () => {
     console.log(`Server running on port ${port}`);
 });
 
 
-// Create server Express
 // Define endpoint for ToDos
 // GET fetch all ToDos
 // POST Create new ToDo
